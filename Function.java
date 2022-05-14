@@ -80,7 +80,7 @@ class Function {
 
         Release_Date =scanName.nextLine();
 
-		sql = "INSERT INTO MOVIE_DB (MovieName,LeadActor,LeadActress,Director,ReleaseDate) " +
+		sql = "INSERT INTO MOVIE (MovieName,LeadActor,LeadActress,Director,ReleaseDate) " +
 
 		"VALUES ('" +MovieName+ "','" +
 
