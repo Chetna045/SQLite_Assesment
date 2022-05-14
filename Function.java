@@ -10,7 +10,7 @@ class Function {
 
 		do{
 
-		System.out.println("Select DML Operation For Product Table...");
+		System.out.println("Select Functions For MOVIE Table...");
 
 		System.out.println("1. Insert new record");
 
@@ -161,7 +161,7 @@ class Function {
 
 		 
 
-		System.out.println("Continue Y OR N?");
+		System.out.println("Continue  ---- >  Y OR N?");
 
 		reader=new Scanner(System.in);
 
