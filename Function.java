@@ -15,8 +15,10 @@ class Function {
 		System.out.println("1. Insert new record");
 
 		System.out.println("2. Retrieve");
+			
+		System.out.println("3. Retrieve movie name with matching actor parameter");
 
-		System.out.println("3. QUIT");
+		System.out.println("4. QUIT");
 
 		Scanner reader = new Scanner(System.in);
 
@@ -122,10 +124,43 @@ class Function {
 		rs.close();
 
 		break;
+				
+	       
+	
+		case 3:
+			
+						
+			scanName=new Scanner(System.in);
+			
+			System.out.println("Enter actor Name:");
+			
+			String actor = scanName.next();
+				
+		    sql = "Select movie_name from MOVIE where LeadActor = '"+ actor +"' ;";
+			
+		    ResultSet r = stmt.executeQuery(sql);
+		    
+		    System.out.println("List of movies in which " + actor +" acted  :");
+			
+		    System.out.println("Movies"+"("+actor")");
+			
+		    while(r.next())
+		    {
+		    	MovieName = r.getString("MovieName");
+		    	
+		    	System.out.println(MovieName);
+				  	
+		    }
+			
+			
+			r.close();
+			
+		break;
+
 
 		 
 
-		case 3:
+		case 4:
 
 		System.exit(0);
 
